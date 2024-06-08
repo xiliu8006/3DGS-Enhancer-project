@@ -88,7 +88,7 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
     
     activeMethodPill = methodPill;
     activeScenePill = scenePill;
-    methodPill.classList.add("active");
+    // methodPill.classList.add("active");
     scenePill.classList.add("active");
 
     
