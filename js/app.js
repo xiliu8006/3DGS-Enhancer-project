@@ -20,7 +20,7 @@ $(document).ready(function () {
     activeModePill = $('.mode-pill').filter('.active')[0];
     activeScenePill = $('.scene-pill').filter('.active')[0];
 
-    resizeAndPlay($('#sparsity')[0]);
+    // resizeAndPlay($('#sparsity')[0]);
 });
 
 // function selectCompVideo(methodPill, scenePill, n_views, modePill) {
