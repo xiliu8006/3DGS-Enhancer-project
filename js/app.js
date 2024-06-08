@@ -59,8 +59,8 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
     activeVidID = 1 - activeVidID;
     var video_active = document.getElementById("compVideo" + activeVidID);
     var video_hidden = document.getElementById("compVideo" + (1 - activeVidID));
-    video_active.src = "videos/comparison/video-"+ n_views +"/"+ method + "/" + pill + ".mp4";
-    video_active.src = "videos/comparison/3DGS-comparison.mp4";
+    video_active.src = "videos/comparison/3DGS-Enhancer-comparision-"+ scenePill + ".mp4";
+    // video_active.src = "videos/comparison/3DGS-comparison.mp4";
     video_active.load();
 
     // if (n_views) {
