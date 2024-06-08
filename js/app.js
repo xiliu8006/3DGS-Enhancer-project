@@ -92,7 +92,7 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
     scenePill.classList.add("active");
 
     
-    var method = methodPill.getAttribute("data-value");
+    // var method = methodPill.getAttribute("data-value");
     var scene = scenePill.getAttribute("data-value");
     var mode = activeModePill ? activeModePill.getAttribute("data-value") : null;
 
@@ -101,7 +101,7 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
     var video_active = document.getElementById("compVideo" + activeVidID);
     var video_hidden = document.getElementById("compVideo" + (1 - activeVidID));
     if (video_active) {
-        video_active.src = "videos/comparison/3DGS-Enhancer-comparison-" + scene + ".mp4";
+        video_active.src = "videos/comparison/3DGS-Enhancer-comparision-" + scene + ".mp4";
         video_active.load();
     }
 
