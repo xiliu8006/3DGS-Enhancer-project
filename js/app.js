@@ -72,7 +72,7 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
     var videoSwitch = document.getElementById("compVideoSwitch");
     var viewNum = document.getElementById("compVideoValue");
 
-    // 安全地移除之前设置的'active'类
+    
     if (activeMethodPill && activeMethodPill.classList) {
         activeMethodPill.classList.remove("active");
     }
@@ -85,23 +85,23 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
         activeModePill = modePill;
     }
 
-    // 设置新的活动元素
+    
     activeMethodPill = methodPill;
     activeScenePill = scenePill;
     methodPill.classList.add("active");
     scenePill.classList.add("active");
 
-    // 获取数据属性
+    
     var method = methodPill.getAttribute("data-value");
-    var pill = scenePill.getAttribute("data-value");
+    var scene = scenePill.getAttribute("data-value");
     var mode = activeModePill ? activeModePill.getAttribute("data-value") : null;
 
-    // 处理视频切换
+    
     activeVidID = 1 - activeVidID;
     var video_active = document.getElementById("compVideo" + activeVidID);
     var video_hidden = document.getElementById("compVideo" + (1 - activeVidID));
     if (video_active) {
-        video_active.src = "videos/comparison/3DGS-Enhancer-comparison-" + scenePill + ".mp4";
+        video_active.src = "videos/comparison/3DGS-Enhancer-comparison-" + scene + ".mp4";
         video_active.load();
     }
 
