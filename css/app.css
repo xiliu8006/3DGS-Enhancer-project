@@ -377,12 +377,12 @@ input:checked + .slider:after
     justify-content: center;
 }
 
-.img-slide {
+#image-container .img-slide {
     max-width: 100%;
     max-height: 100%;
     display: none; /* Initially hide images */
 }
-.img-slide.active {
+#image-container .img-slide.active {
     display: block; /* Only show active image */
 }
 
