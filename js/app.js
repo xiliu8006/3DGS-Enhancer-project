@@ -110,25 +110,3 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
         viewNum.innerHTML = n_views;
     }
 }
-
-var currentImageIndex = 0;
-var images = document.querySelectorAll('.image_container img');
-
-function nextImage() {
-    changeImage(1);
-}
-
-function previousImage() {
-    changeImage(-1);
-}
-
-function changeImage(step) {
-    // Hide the current image
-    images[currentImageIndex].classList.remove('active');
-
-    // Calculate the new index using modulo operation to wrap around
-    currentImageIndex = (currentImageIndex + step + images.length) % images.length;
-
-    // Show the new current image
-    images[currentImageIndex].classList.add('active');
-}
