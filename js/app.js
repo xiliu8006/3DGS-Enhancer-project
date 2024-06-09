@@ -111,25 +111,24 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
     }
 }
 
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slides img');
-const totalSlides = slides.length;
+var currentImageIndex = 0;
+var images = document.querySelectorAll('#image-container img');
 
-document.querySelector('.prev').addEventListener('click', () => {
-    moveSlide(-1);
-});
-
-document.querySelector('.next').addEventListener('click', () => {
-    moveSlide(1);
-});
-
-function moveSlide(direction) {
-    currentSlide += direction;
-    if (currentSlide >= totalSlides) {
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = totalSlides - 1;
-    }
-    document.querySelector('.slides').style.transform = `translateX(-${currentSlide * 100}%)`;
+function nextImage() {
+    changeImage(1);
 }
 
+function previousImage() {
+    changeImage(-1);
+}
+
+function changeImage(step) {
+    // Hide the current image
+    images[currentImageIndex].classList.remove('active');
+
+    // Calculate the new index using modulo operation to wrap around
+    currentImageIndex = (currentImageIndex + step + images.length) % images.length;
+
+    // Show the new current image
+    images[currentImageIndex].classList.add('active');
+}
