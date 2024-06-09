@@ -320,12 +320,14 @@ function previousImage() {
 function changeImage(step) {
     // Hide the current image
     images[currentImageIndex].classList.remove('active');
+    images[currentImageIndex].classList.add('hidden'); // Ensure it gets hidden
 
     // Calculate the new index using modulo operation to wrap around
     currentImageIndex = (currentImageIndex + step + images.length) % images.length;
 
     // Show the new current image
     images[currentImageIndex].classList.add('active');
+    images[currentImageIndex].classList.remove('hidden'); // Ensure it is visible
 }
 </script>
 </body>
