@@ -112,7 +112,7 @@ function selectCompVideo(methodPill, scenePill, n_views, modePill) {
 }
 
 var currentImageIndex = 0;
-var images = document.querySelectorAll('.image-container img');
+var images = document.querySelectorAll('.image_container img');
 
 function nextImage() {
     changeImage(1);
